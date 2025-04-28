@@ -10,3 +10,4 @@
 5. Plot venn and upset
 6. Plot regulons related
 7. Trend analysis with STEM
+8. InferCNV and plots
