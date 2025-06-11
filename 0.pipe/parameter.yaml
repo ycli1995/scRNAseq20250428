@@ -1,0 +1,65 @@
+---
+FindMarkers:
+  logfc: 0.25
+  min_pct: 0.25
+  pvalue: 0.01
+Groups:
+  Endometrioma:
+    - Endometrioma-1
+    - Endometrioma-2
+    - Endometrioma-3
+  Normal-Ovary:
+    - Normal-Ovary-1
+  OCCC:
+    - OCCC
+  rOCCC:
+    - rOCCC-1
+    - rOCCC-2
+    - rOCCC-3
+    - rOCCC-4
+cell_cycle:
+  is_remove: TRUE
+  is_rm_all_signal: FALSE
+cluster_resolution: 0.5
+data:
+  dir:
+    - /path to the matrix dir for Normal-Ovary-1
+    - /path to the matrix dir for Endometrioma-1
+    - /path to the matrix dir for Endometrioma-2
+    - /path to the matrix dir for Endometrioma-3
+    - /path to the matrix dir for OCCC
+    - /path to the matrix dir for rOCCC-1
+    - /path to the matrix dir for rOCCC-2
+    - /path to the matrix dir for rOCCC-3
+    - /path to the matrix dir for rOCCC-4
+  name:
+    - Normal-Ovary-1
+    - Endometrioma-1
+    - Endometrioma-2
+    - Endometrioma-3
+    - OCCC
+    - rOCCC-1
+    - rOCCC-2
+    - rOCCC-3
+    - rOCCC-4
+filter:
+  filter.cells: doublet.xls
+  min.cell: 0
+  set.num: none
+  set.num.seed: ~
+  standard:
+    nCount_RNA: [ -.inf, 43000 ]
+    nFeature_RNA: [ 200, 6000 ]
+    percent.mito: [ -.inf, 20.0 ]
+heatmap:
+  top: 5
+integration:
+  method: harmony
+marker:
+  excluded: ~
+  expected: ~
+  mito_list: path to the mito gene list mt_list.xls
+  more: ~
+name_list: path to the gene id and symbol list file name_list.xls
+project_id: ~ 
+version: 5.0
